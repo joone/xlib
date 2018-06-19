@@ -46,34 +46,34 @@ all: $(ALL_PROGS)
 	 find . \( ! -type d -a -perm +100  \) -exec strip {} \;
 
 $(S_WIN): $(S_WIN_OBJS)
-	$(LD) $(LDFLAGS) $(S_WIN_OBJS) -o $(S_WIN)
+	$(LD) $(S_WIN_OBJS) $(LDFLAGS) -o $(S_WIN)
 
 $(S_DRAW): $(S_DRAW_OBJS)
-	$(LD) $(LDFLAGS) $(S_DRAW_OBJS) -o $(S_DRAW)
+	$(LD) $(S_DRAW_OBJS) $(LDFLAGS) -o $(S_DRAW)
 
 $(EVENTS): $(EVENTS_OBJS)
-	$(LD) $(LDFLAGS) $(EVENTS_OBJS) -o $(EVENTS)
+	$(LD) $(EVENTS_OBJS) $(LDFLAGS) -o $(EVENTS)
 
 $(F_TEXT): $(F_TEXT_OBJS)
-	$(LD) $(LDFLAGS) $(F_TEXT_OBJS) -o $(F_TEXT)
+	$(LD) $(F_TEXT_OBJS) $(LDFLAGS) -o $(F_TEXT)
 
 $(S_TEXT): $(S_TEXT_OBJS)
-	$(LD) $(LDFLAGS) $(S_TEXT_OBJS) -o $(S_TEXT)
+	$(LD) $(S_TEXT_OBJS) $(LDFLAGS) -o $(S_TEXT)
 
 $(S_WM_HINTS): $(S_WM_HINTS_OBJS)
-	$(LD) $(LDFLAGS) $(S_WM_HINTS_OBJS) -o $(S_WM_HINTS)
+	$(LD) $(S_WM_HINTS_OBJS) $(LDFLAGS) -o $(S_WM_HINTS)
 
-$(S_WIN_OPS): $(S_WIN_OPS_OBJS)
-	$(LD) $(LDFLAGS) $(S_WIN_OPS_OBJS) -o $(S_WIN_OPS)
+$(WIN_OPS): $(WIN_OPS_OBJS)
+	$(LD) $(WIN_OPS_OBJS) $(LDFLAGS) -o $(WIN_OPS)
 
 $(COLOR_DRAW): $(COLOR_DRAW_OBJS)
-	$(LD) $(LDFLAGS) $(COLOR_DRAW_OBJS) -o $(COLOR_DRAW)
+	$(LD) $(COLOR_DRAW_OBJS) $(LDFLAGS) -o $(COLOR_DRAW)
 
 $(DRAW_PIXMAP): $(DRAW_PIXMAP_OBJS)
-	$(LD) $(LDFLAGS) $(DRAW_PIXMAP_OBJS) -o $(DRAW_PIXMAP)
+	$(LD) $(DRAW_PIXMAP_OBJS) $(LDFLAGS) -o $(DRAW_PIXMAP)
 
 $(CURSOR): $(CURSOR_OBJS)
-	$(LD) $(LDFLAGS) $(CURSOR_OBJS) -o $(CURSOR)
+	$(LD) $(CURSOR_OBJS) $(LDFLAGS) -o $(CURSOR)
 
 # compile C source files into object files.
 %.o: %.c 
